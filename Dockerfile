@@ -7,4 +7,4 @@ RUN apt-get update \
     && wget --no-check-certificate https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
     && dpkg -i google-chrome*.deb; exit 0
 
-RUN apt-get -y --no-install-recommends -f install
+RUN apt-get -y --no-install-recommends -f install; exit 0
