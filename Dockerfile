@@ -8,3 +8,9 @@ RUN apt-get update \
     && dpkg -i google-chrome*.deb; exit 0
 
 RUN apt-get -y --no-install-recommends -f install; exit 0
+
+RUN apt-get -y --no-install-recommends firefox
+
+RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 \
+    && tar xf phantomjs-2.1.1-linux-x86_64.tar.bz2 \
+    && mv phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/bin/
